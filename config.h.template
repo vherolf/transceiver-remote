@@ -1,0 +1,5 @@
+// Rename this file to config.h
+// this file is intended to hold your wifi and mqtt credentials
+const char* ssid = "";
+const char* wifiPassword = "";
+const char* mqttServer = "";
