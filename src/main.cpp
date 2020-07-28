@@ -1,8 +1,8 @@
 /*
 
-This is a arduino sketch for a esp32 to build a remote control that can 
+This is a sketch for a esp32 to build a remote control that can 
 send and receive mqtt messages.
-The ESp32 connects to your wireless network and connects to your mqtt server. 
+The Esp32 connects to your wireless network and connects to your mqtt server. 
 
 Functions:
  - connect to your wifi
@@ -129,7 +129,7 @@ uint16_t lasttouched = 0;
 uint16_t currtouched = 0;
 
 // This function is to handle incoming messages
-void callback(char* intopic, byte* payload, unsigned int length) {
+void mqtt_callback(char* intopic, byte* payload, unsigned int length) {
   // decode message 
   String message = "";
   for (unsigned int i=0; i< length; i++) {
@@ -207,7 +207,7 @@ void setup()
 #endif
  
   client.setServer(mqttServer, 1883);
-  client.setCallback(callback);
+  client.setCallback(mqtt_callback);
 /*
   WiFi.disconnect();
   WiFi.mode(WIFI_AP_STA);

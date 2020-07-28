@@ -1,8 +1,9 @@
 # transceiver-remote
 
-This is a arduino sketch for a esp32 to build a remote control that can 
+This is a sketch for a esp32 to build a remote control that can 
 send and receive mqtt messages.
-The ESp32 connects to your wireless network and connects to your mqtt server. 
+The Esp32 connects to your wireless network and connects to your mqtt server. 
+
 Functions:
  - connect to your wifi
  - connect to your mqtt server
@@ -16,9 +17,17 @@ Functions:
 Tested with nodeMCU, Adafruit Feather ESP32 and Heltec Wireless Stick
 
 ## incoming mqtt
-The callback function is used to handle incoming mqtt messages.
+The mqtt_callback function is used to handle incoming mqtt messages.
 
 Don't forget to set the subscribed topics in the reconnect function.
+
+## MPR121
+
+connecting
+
+![MPR121 hookup](pictures/mpr121-hookup.jpg)
+
+In loop you can define the actions for the MPR121
 
 ## GPIO based switches
 
