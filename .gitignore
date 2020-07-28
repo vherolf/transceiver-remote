@@ -1,5 +1,7 @@
 config.h
 src/config.h
+.pio/
+.vscode/
 
 # Prerequisites
 *.d
